@@ -1,0 +1,33 @@
+
+	<head>
+		<link stylesheet="stylesheet" href="users.scss">
+		<title>Bookers</title>
+	</head>
+		<div style="background-color: #000;">
+		<div class="headline" >
+		<div class="hline1">
+			<div class="heads">
+			<strong>
+			<span class="glyphicon glyphicon-book glp1" aria-hidden="true"></span>
+			<a class="htitle">Bookers</a>
+			</strong>
+			</div>
+		</div>
+		<nav class="hline2 litxt">
+			<ul class="litxt">
+			<% if user_signed_in? %>
+				<li class="ltxt"><span class="glyphicon glyphicon-home" aria-hidden="true"></span><a class="listtxt"><%= link_to 'Home',user_path(current_user.id) %></a></li>
+				<li class="ltxt"><span class="glyphicon glyphicon-user" aria-hidden="true"></span><a class="listtxt"><%= link_to 'Users',users_path %></a></li>
+				<li class="ltxt"><span class="glyphicon glyphicon-book" aria-hidden="true"></span><a class="listtxt"><%= link_to 'Books',posts_path %></a></li>
+				<li class="ltxt"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span><a class="listtxt"><%= link_to 'Logout',destroy_user_session_path, method: :delete %></a></li>
+			<% else %>
+				<li class="ltxt"><span class="glyphicon glyphicon-home" aria-hidden="true"></span><a class="listtxt"><%= link_to 'Home',top_path %></a></li>
+				<li class="ltxt"><span class="glyphicon glyphicon-link" aria-hidden="true"></span><a class="listtxt"><%= link_to 'About',abouts_path %></a></li>
+				<li class="ltxt"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span><a class="listtxt"><%= link_to 'Sign up',new_user_registration_path %></a></li>
+				<li class="ltxt"><span class="glyphicon glyphicon-log-in" aria-hidden="true"></span><a class="listtxt"><%= link_to 'Login',new_user_session_path %></a></li>
+			<% end %>
+			</ul>
+		</nav>
+	</div>
+	</div>
+

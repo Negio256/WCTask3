@@ -1,0 +1,225 @@
+/* 雑多　*/
+	*{
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+	.clearfix::after{
+		content:"";
+		display:block;
+		clear: both;
+	}
+
+
+/* Headline */
+
+	.headline{
+		height:50px;
+	}
+
+	.heaadline{
+		width:80%;
+		padding-left:10%;
+	}
+
+	.hline1{
+		float:left;
+		height:50px;
+		text-align: left;
+		margin-left:2.5%;
+	}
+
+	.glp1{
+		color:#fff;
+	}
+
+	.htitle{
+		color: #fff;
+	}
+
+	.htitle:hover{
+		color: #fff;
+	}
+
+	.heads{
+		line-height:50px;
+		font-size:20px;
+	}
+
+	.hline2{
+		color: #ddd;
+	}
+
+	.litxt{
+		line-height:50px;
+		float:right;
+		display:inline-block;
+		margin-right:10px;
+	}
+
+	.ltxt{
+		list-style:none;
+		display:inline-block;
+		margin:0 10px;
+		font-color: #eee
+	}
+
+	.glp2{
+		font-color: #aaa;
+	}
+
+	.listtxt{
+		color:#aaa;
+	}
+
+	.listtxt:hover{
+		color:#aaa;
+	}
+
+
+/* footer */
+
+	.foot{
+		width:90%;
+		text-align:right;
+		padding:10px;
+	}
+
+	.footer{
+		color: #000;
+		padding-right: 10px;
+	}
+	.footer:hover{
+		color: #000;
+	}
+
+
+/* sidebar */
+	.sidebarbigbox{
+		width:auto;
+		padding:0 5%;
+	}
+
+	.sidebar1{
+		margin:0 auto;
+		display:inline-block;
+	}
+
+	.sidebar2{
+		display:inline-block;
+	}
+
+	.userinfo{
+		border-bottom: solid 1px #eee;
+	}
+
+	.userinfobtn{
+
+	}
+
+	.infobtn{
+		width:130px;
+	}
+
+	.btncolor{
+		background-color: #337ab7;
+    	border-color: #2e6da4;
+	}
+
+
+/* sign up */
+
+	.sgupbigbox{
+		width:90%;
+		margin:0 auto;
+	}
+
+	.field{
+		margin:10px 0;
+	}
+
+	.sgupact{
+		background-color: #5cb85c;
+	    border-color: #4cae4c;
+		border-radius:5px;
+		width:80px;
+		color: #fff;
+		text-align:center;
+	}
+
+
+/* top page */
+
+	.tppgbigbox{
+		padding: 10px;
+		width: auto;
+	}
+
+	.tppgbox{
+		width:60%;
+		margin:0 auto;
+	}
+
+	.tppgabb{
+		width:auto;
+	}
+
+	.glp3{
+		color: #000;
+	}
+
+	.tppglinks{
+		text-align:center;
+		width:95%;
+		margin:0 auto;
+	}
+
+	.tppglgin{
+		background-color: #5bc0de;
+	    border-color: #46b8da;
+	    border-radius:5px;
+	    height: 30px;
+	}
+
+	.tppgsgup{
+		background-color: #5cb85c;
+		border-color: #4cae4c;
+		border-radius:5px;
+		height: 30px;
+	}
+
+
+/* about page */
+
+	.abpgbigbox{
+		width:auto;
+	}
+
+	.abpgbox{
+		width:70%;
+		margin: 0 auto;
+	}
+
+
+/* edit profile page */
+
+	.editprofile{
+		padding-left:5%;
+	}
+
+
+/* table */
+
+	.bookstablebigbox{
+		width:100%;
+	}
+
+	.tables{
+		width:30%;
+	}
+
+	.tableborder{
+		padding-bottom: 9px;
+   		margin: 40px 0 20px;
+   		border-bottom: 1px solid #eeeeee;
+	}

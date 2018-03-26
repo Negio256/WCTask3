@@ -1,0 +1,29 @@
+
+	<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 sidebar1">
+
+		<div class="sdbarbigb">
+			<div class="page-header"><h2><strong>User info</strong></h2>
+			 <%= attachment_image_tag user, :image, :fill, 100, 100, format: 'jpeg', fallback: "no_image.jpg" %></div>
+			<div class="userinfo"><h5><strong>Name：</strong><%= user.name %></h5></div>
+			<div class="userinfo"><h5><strong>Introduction</strong></h5></div>
+			<div class="userinfo"><h5><%= user.introduction %></h5></div>
+			<div class="btn-group "><%= link_to "",edit_user_path(user.id) ,class:"glyphicon glyphicon-wrench btn btn-default infobtn" %></div>
+
+
+		</div>
+
+		<div>
+			<h2>New book</h2>
+			<%= form_for(post) do |f| %>
+			<div>
+				<p>Title</p><%= f.text_field :title %>
+			</div>
+			<div>
+		  		<p>Body</p><%= f.text_area :body  %>
+			</div>
+			<div>
+				<%= f.submit 'Create Book',class:"btn btn-default infobtn btncolor1" %>
+			</div>
+			<% end %>
+		</div>
+	</div>

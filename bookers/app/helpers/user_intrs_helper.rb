@@ -1,0 +1,2 @@
+module UserIntrsHelper
+end

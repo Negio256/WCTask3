@@ -1,0 +1,30 @@
+<%= render 'devise/sessions/hdline' %>
+<div class="sidebarbigbox row">
+	<%= render 'devise/sessions/sidebar',post: @post,user: current_user  %>
+<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8 sidebar2">
+	<div>
+	<h2>Books</h2>
+	<table class="bookstablebigbox">
+		<thead>
+			<tr class="page-header">
+				<th class="tables"></th>
+				<th class="tables">Title</th>
+				<th class="tables">Opinion</th>
+			</tr>
+		</thead>
+		<tbody>
+			<% @posts.each do |post| %>
+			<tr class="tableborder">
+				<td> <%= attachment_image_tag post.user, :image, :fill, 50, 50, format: 'jpeg', fallback: "no_image.jpg" %></td>
+				<td><%= link_to post.title,post_path(post) %></td>
+				<td><%= post.body %></td>
+			</tr>
+				<% end %>
+		</tbody>
+	</table>
+
+	</div>
+</div>
+</div>
+
+<%= render 'devise/sessions/footer' %>

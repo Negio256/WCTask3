@@ -1,0 +1,29 @@
+<%= render 'shared/hdline' %>
+<div class="editprofile">
+<h2>Editing User Information..</h2>
+
+<div class="row">
+  <div class="">
+    <%= form_for(@user) do |f| %>
+    <div class="field">
+    <%= f.label :Name %>
+    <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
+    </div>
+    <div class="field">
+    <%= f.label :Image %><br />
+    <%= attachment_image_tag current_user, :image, :fill, 100, 100, fallback: "no_image.jpg" %>
+    <%= f.attachment_field :image, placeholder: "profileImage" %>
+    </div>
+    <div class="field">
+      <%= f.label :introduction %><br />
+      <%= f.text_area :introduction, autocomplete: "Introduction" %>
+    </div>
+    <div class="actions">
+      <%= f.submit "User Update" %>
+    <% end %>
+    </div>
+   </div>
+  </div>
+
+</div>
+<%= render 'shared/footer' %>

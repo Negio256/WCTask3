@@ -1,0 +1,26 @@
+<%= render 'shared/hdline' %>
+
+<div class="tppgbigbox">
+	<div class="tppgbox">
+		<div class="tppgtitle">
+		<h2>Welcome to <strong><span class="glyphicon glyphicon-book glp3" aria-hidden="true"></span>Bookers</strong>!!</h2>
+		</div>
+		<div class="tppgabb">
+		<p>In<strong><span class="glyphicon glyphicon-book glp3" aria-hidden="true"></span>Bookers</strong>,<br>you can share and exchange your opinions , inpressions , and emotons<br> about various books!</p>
+		</div>
+	</div>
+	<div>
+		<div class="row">
+			<div class="col-lg-4 col-md-4 col-sm-2 col-xs-2"></div>
+			<div class="col-lg-4 col-md-4 col-sm-8 col-xs-8 btn-sm btn-info text-dark text-center"><%= link_to 'Log in',"users/sign_in" %></div>
+			<div class="col-lg-4 col-md-4 col-sm-2 col-xs-2"></div>
+		</div>
+		<div class="row">
+			<div class="col-lg-4 col-md-4 col-sm-2 col-xs-2"></div>
+			<div class="col-lg-4 col-md-4 col-sm-8 col-xs-8 btn-sm btn-success text-dark text-center"><%= link_to 'Sign UP',"users/sign_up" %></div>
+			<div class="col-lg-4 col-md-4 col-sm-2 col-xs-2"></div>
+		</div>
+	</div>
+</div>
+
+<%= render 'shared/footer' %>

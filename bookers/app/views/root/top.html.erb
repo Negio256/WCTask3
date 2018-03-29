@@ -1,5 +1,5 @@
 <%= render 'shared/hdline' %>
-
+<p class="notice"><%= notice %></p>
 <div class="tppgbigbox">
 	<div class="tppgbox">
 		<div class="tppgtitle">
@@ -9,6 +9,19 @@
 		<p>In<strong><span class="glyphicon glyphicon-book glp3" aria-hidden="true"></span>Bookers</strong>,<br>you can share and exchange your opinions , inpressions , and emotons<br> about various books!</p>
 		</div>
 	</div>
+	<% if user_signed_in? %>
+	<div>
+		<div class="row">
+			<div class="col-lg-4 col-md-4 col-sm-2 col-xs-2"></div>
+			<div class="col-lg-4 col-md-4 col-sm-8 col-xs-8 btn-sm btn-info text-dark text-center"><%= link_to 'My Page',"users/#{:id}" %></div>
+			<div class="col-lg-4 col-md-4 col-sm-2 col-xs-2"></div>
+		</div>
+		<div class="row">
+			<div class="col-lg-4 col-md-4 col-sm-2 col-xs-2"></div>
+			<div class="col-lg-4 col-md-4 col-sm-8 col-xs-8 btn-sm btn-success text-dark text-center"><%= link_to 'Books',"posts" %></div>
+			<div class="col-lg-4 col-md-4 col-sm-2 col-xs-2"></div>
+		</div>
+	<% else %>
 	<div>
 		<div class="row">
 			<div class="col-lg-4 col-md-4 col-sm-2 col-xs-2"></div>
@@ -21,6 +34,7 @@
 			<div class="col-lg-4 col-md-4 col-sm-2 col-xs-2"></div>
 		</div>
 	</div>
+	<% end %>
 </div>
 
 <%= render 'shared/footer' %>

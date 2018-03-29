@@ -1,4 +1,7 @@
 <%= render 'shared/hdline' %>
+
+<% if @user.id == current_user.id %>
+
 <div class="editprofile">
 <h2>Editing User Information..</h2>
     <% if @user.errors.any? %>
@@ -28,4 +31,11 @@
   </div>
 
 </div>
+
+<% else %>
+<p> このページを表示することが出来ません。</p>
+<%= link_to 'Homeへ戻る',root_path %>
+
+<% end %>
+
 <%= render 'shared/footer' %>

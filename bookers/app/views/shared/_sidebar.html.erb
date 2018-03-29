@@ -1,0 +1,32 @@
+
+	<div class="col-lg-3 col-md-3 col-sm-3 col-xs-4 sidebar1">
+
+		<div class="">
+			<div class="page-header"><h2><strong>User info</strong></h2>
+			 <%= attachment_image_tag user, :image, :fill, 100, 100, format: 'jpeg', fallback: "no_image.jpg" %></div>
+			<div class="userinfo"><h5><strong>Name：</strong><%= user.name %></h5></div>
+			<div class="userinfo"><h5><strong>Introduction：</strong></h5></div>
+			<div class="userinfo"><h5><%= user.introduction %></h5></div>
+			<% if user == current_user %>
+			<%= link_to "",edit_user_path(user.id) ,class:"glyphicon glyphicon-wrench btn btn-block btn-default" %>
+			<% end %>
+		</div>
+
+		<div class="">
+			<h2>New book</h2><br>
+			<% if @post.errors.any? %>
+				<h5 class="error-color">※Opinionは最大200文字です。</h5>
+				<% end %>
+			<%= form_for(post) do |f| %>
+			<div>
+				<p>Title</p><%= f.text_field :title %>
+			</div>
+			<div>
+		  		<p>Opinion</p><%= f.text_area :body  %>
+			</div>
+			<div>
+				<%= f.submit 'Create Book',class:"btn btn-block btn-primary" %>
+			</div>
+			<% end %>
+		</div>
+	</div>

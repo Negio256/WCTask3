@@ -1,0 +1,34 @@
+<%= render 'shared/hdline' %>
+
+
+<div class="sidebarbigbox row">
+	<%= render 'shared/sidebar', post: @post,user: @user %>
+<div class="col-lg-9 col-md-9 col-sm-9 col-xs-8 sidebar2">
+	<div class="">
+	<h2>Users</h2>
+<table  class="table table-condensed">
+		<thead>
+			<tr class="page-header">
+				<th class="tables col-lg-1 col-md-2 col-sm-2 col-xs-2">image</th>
+				<th class="tables col-lg-5 col-md-4 col-sm-4 col-xs-4">name</th>
+				<th class="tables col-lg-2 col-md-2 col-sm-2 col-xs-2"></th>
+			</tr>
+		</thead>
+		<tbody>
+          <% @users.each do |user| %>
+            <div>
+			<tr class="page-header">
+				<td><%= attachment_image_tag user, :image, :fill, 40, 40, fallback: "no_image.jpg" %></td>
+				<td><%= user.name %></td>
+				<td><%= link_to 'Show' , user_path(user.id) %></td>
+			</tr>
+			</div>
+		  <% end %>
+		</tbody>
+	</table>
+</div>
+</div>
+</div>
+
+
+<%= render 'shared/footer' %>

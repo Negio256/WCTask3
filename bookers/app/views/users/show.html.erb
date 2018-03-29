@@ -1,0 +1,35 @@
+<%= render 'shared/hdline' %>
+
+<div class="sidebarbigbox row">
+	<%= render 'shared/sidebar', post: @post,user:@user %>
+<div class="col-lg-9 col-md-9 col-sm-9 col-xs-8 sidebar2">
+	<div class="container">
+	<h2>Books</h2>
+	<table class="table table-hover">
+		<div>
+		<thead>
+			<tr class="page-header">
+				<th class="tables col-lg-1 col-md-1 col-sm-1 col-xs-1"></th>
+				<th class="tables col-lg-3 col-md-3 col-sm-3 col-xs-3">Title</th>
+				<th class="tables col-lg-4 col-md-4 col-sm-4 col-xs-4">Opinion</th>
+			</tr>
+		</thead>
+		</div>
+		<div>
+		<tbody>
+			<% @posts.each do |post| %>
+			<tr>
+				<td> <%= attachment_image_tag @user, :image, :fill, 50, 50, format: 'jpeg', fallback: "no_image.jpg" %></td>
+				<td><%= link_to post.title,post_path(post) %></td>
+				<td><%= post.body %></td>
+			</tr>
+			<% end %>
+		</tbody>
+		</div>
+	</table>
+
+	</div>
+</div>
+</div>
+
+<%= render 'shared/footer' %>

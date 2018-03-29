@@ -6,5 +6,5 @@ class User < ApplicationRecord
   has_many :posts , dependent: :destroy
   attachment :image
   validates :name, presence: true, length:2..20
-  validates :introduction, length:0..50, allow_blank: true
+  validates :introduction, length: { maximum:50 }
 end

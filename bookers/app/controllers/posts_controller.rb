@@ -7,13 +7,12 @@ before_action :authenticate_user!
 	end
 
 	def create
-		post = Post.new(post_params)
-		post.user_id = current_user.id
-		if  post.save
+		@post = Post.new(post_params)
+		@post.user_id = current_user.id
+		if  @post.save
 			redirect_to post_path(post.id)
 		else
 			@posts = Post.all
-			@post = Post.new
 			render:index
 		end
 	end
@@ -41,7 +40,7 @@ before_action :authenticate_user!
 		else
 			@post = Post.new
 			@posts = Post.all
-			render :index
+			render:index
 		end
 	end
 
@@ -54,7 +53,7 @@ before_action :authenticate_user!
 		else
 			@post = Post.new
 			@posts = Post.all
-			render :index
+			render:index
 		end
 	end
 

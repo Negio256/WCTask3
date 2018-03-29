@@ -1,9 +1,11 @@
 <%= render 'shared/hdline' %>
 <div class="editprofile">
-<h2>Editing UserInfo...</h2>
-
+<h2>Editing User Information..</h2>
+    <% if @user.errors.any? %>
+        <h5 class="error-color">※Nameは2~20文字、Introductionは最大50文字です。</h5>
+    <% end %>
 <div class="row">
-  <div class="col">
+  <div class="">
     <%= form_for(@user) do |f| %>
     <div class="field">
     <%= f.label :Name %>

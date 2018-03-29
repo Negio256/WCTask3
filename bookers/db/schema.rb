@@ -12,29 +12,7 @@
 
 ActiveRecord::Schema.define(version: 20180324120624) do
 
-  create_table "add_image_id_to_users", force: :cascade do |t|
-    t.text "image_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
 
-  create_table "add_image_to_users", force: :cascade do |t|
-    t.text "image"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "add_user_id_to_posts", force: :cascade do |t|
-    t.integer "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "post_images", force: :cascade do |t|
-    t.integer "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
 
   create_table "posts", force: :cascade do |t|
     t.string "title"
@@ -44,17 +22,6 @@ ActiveRecord::Schema.define(version: 20180324120624) do
     t.integer "user_id"
   end
 
-  create_table "remove_image_from_users", force: :cascade do |t|
-    t.text "image"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "remove_image_id_from_users", force: :cascade do |t|
-    t.text "image_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
 
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false

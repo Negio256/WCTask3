@@ -23,7 +23,8 @@ before_action :authenticate_user!
 
 	def update
 	  @user = User.find(params[:id])
-	  if @user.update(user_params)
+	  if @user_id = current_user.id
+	  	@user.update(user_params)
       redirect_to user_path(@user.id)
   	  else
   	  	@post = Post.new
